@@ -1,1 +1,16 @@
-<h1>home </h1>
+{% extends 'base.html' %}
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+
+{% block content %}
+    {% if heros_list %}
+    <ul>
+        {% for hero in heros_list %}
+            <li>{{ hero.name }} &middot; {{ hero.points }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Heros Yet</p>
+    {% endif %}
+{% endblock content %}

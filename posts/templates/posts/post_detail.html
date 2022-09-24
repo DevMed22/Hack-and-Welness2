@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>{{ post.title }}</title>
+{% endblock title %}
+
+{% block content %}
+<ul>
+    <a href="{{ post.update }}">Edit</a>
+    <a href="{% url 'posts:delete_post' post.pk %}">Delete</a>
+    {% if post.thumb %}
+        <img src="{{ post.thumb.url }}" alt="NOT FOUND">
+    {% endif %}
+    <p>Title: <li>{{post.title}}</li></p>
+    <p>Body: <li>{{post.body}}</li></p>
+    <p>Published Date: <li>{{post.published_date}}</li></p>
+    {% if post.edited_date %}
+        <p>Edited Date: <li>{{post.edited_date}}</li></p>
+    {% endif %}
+    <p>Author: <li>{{post.author}}</li></p>
+    <h3>Comments</h3>
+    {% for comment in post.comment_set.all %}
+        <li>{{comment}} &middot; {{comment.author}}</li>
+    {% endfor %}
+    <h3>Add Comment</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form |crispy }}
+        <button type="submit">Save</button>
+    </form>
+</ul>
+{% endblock content %}

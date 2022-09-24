@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'pages.apps.PagesConfig',    #pages
     'accounts.apps.AccountsConfig', # Auth
+    'posts.apps.PostsConfig', # posts
 ]
 
 AUTH_USER_MODEL = 'accounts.Hero'
