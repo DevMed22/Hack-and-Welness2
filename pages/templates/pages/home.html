@@ -5,12 +5,32 @@
 
 {% block content %}
     {% if heros_list %}
-    <ul>
-        {% for hero in heros_list %}
-            <li>{{ hero.name }} &middot; {{ hero.points }}</li>
-        {% endfor %}
-    </ul>
+    <p style="font-weight:bold;text-align: center;margin-top: 30px;font-size: 30px;color: blue;">Scoreboard</p>
+        <div class="container py-5">
+            <table class="table table-secondry table-striped  table-bordered text-center">
+    
+                <thead>
+                    <tr>
+                        <th>Hero Name</th>
+                        <th>points</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    {% for hero in heros_list %}
+              <tr>
+                <td>
+                    {{ hero.name }}
+                </td>
+                <td>
+                    {{ hero.points }}
+                </td>
+              </tr>
+              {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% else %}
     <p>No Heros Yet</p>
     {% endif %}
+  
 {% endblock content %}
