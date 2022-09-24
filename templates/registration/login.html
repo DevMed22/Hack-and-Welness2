@@ -1,17 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
     <title>Login</title>
 </head>
 <body>
-    <form method="post">
-        {% csrf_token %}
-        {{form}}
-        <button type="submit">Login</button>
-        <a href="{% url 'password_reset' %}">Forget Password ?</a>
+    <img class="login" src="{% static 'Mobile_login-bro.png' %}" >
+
+    <form method="post">{% csrf_token %}
+    {{ form }}
+    <button id="login" type="submit">Login</button>
+                <div class="login_link">
+                 haven't an account <a href="{% url 'signup' %}">SignUp</a>
+                </div>
+                <div class="forget">
+    <a href="{% url 'password_reset' %}">Forget Password?</a>
+</div>
     </form>
 </body>
 </html>

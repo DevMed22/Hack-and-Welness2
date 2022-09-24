@@ -1,24 +1,55 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
     <title>Posts</title>
 {% endblock title %}
 
 {% block content %}
-    <a href="{% url 'posts:create_post' %}">Post Something</a>
+   <button style="margin-left: 90%;
+   margin-top: 50px;
+   /* margin-right: 0; */
+   border: 3px solid green;
+   padding: 10px 5px;
+   border-radius: 20px;
+   background-color: green;
+"><a href="{% url 'posts:create_post' %}"style="text-decoration:none;color:#fff;">Post Something</a></button>
     {% if posts_list %}
         <ul>
             {% for post in posts_list %}
-                <p>Title: <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li></p>
-                <p>Author: <li>{{ post.author }}</li></p>
-                <p>Published At: <li>{{ post.published_date }}</li></p>
-                {% if post.comment_set.all %}
-                    {% for comment in post.comment_set.all %}
-                        <ul>
-                            <li>{{comment}} &middot; {{comment.author}}</li>
-                        </ul>
-                    {% endfor %}
-                {% endif %}
+            <!-- <div style="display: flex; justify-content:space-between col-md-4 col-sm-6">
+                <div class="card text-center" style="width: 18rem;">
+                    <img src="{{ post.thumb }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-title"> <li style="font-weight: bold;font-size: 20px;">{{ post.title }}</li></p>
+                        <span class="card-text">{{ post.author }}</span>
+                        <span style="margin-left:20px;">{{ post.published_date }}</span>
+                      <p class="card-text">{{ post.body }}</p>
+                      <a class="btn btn-primary"href="{{ post.get_absolute_url }}"style="text-decoration:none;">Go somewhere</a>
+                    </div>
+                  </div>
+            </div> -->
+            
+            <div class="container">
+                <div class="row justify-content-evenly">
+                    <div class="card text-center col-4" style="width: 18rem;">
+                        <div class="img-box">
+                            {% if post.thumb %}
+                            <img src="{{ post.thumb.url }}" alt="">
+                            {% else %}
+                            <h3>No Image</h3>
+                            {% endif %}
+                          </div>
+                        <div class="card-body">
+                            <p class="card-title"> <li style="font-weight: bold;font-size: 20px;">{{ post.title }}</li></p>
+                            <span class="card-text">{{ post.author }}</span>
+                            <span style="margin-left:20px;">{{ post.published_date }}</span>
+                          <p class="card-text">{{ post.body }}</p>
+                          <a class="btn btn-primary"href="{{ post.get_absolute_url }}"style="text-decoration:none;">Go somewhere</a>
+                        </div>
+                      
+                  </div>
+                </div>
+              </div>
             {% endfor %}
         </ul>
     {% else %}
