@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Posts</title>
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'posts:create_post' %}">Post Something</a>
+    {% if posts_list %}
+        <ul>
+            {% for post in posts_list %}
+                <p>Title: <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li></p>
+                <p>Author: <li>{{ post.author }}</li></p>
+                <p>Published At: <li>{{ post.published_date }}</li></p>
+                {% if post.comment_set.all %}
+                    {% for comment in post.comment_set.all %}
+                        <ul>
+                            <li>{{comment}} &middot; {{comment.author}}</li>
+                        </ul>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Posts For Now</p>
+    {% endif %}
+{% endblock content %}  
