@@ -7,6 +7,11 @@
     <title>SignUp</title>
 </head>
 <body>
-    
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">SignUp</button>
+        <a href="{% url 'login' %}">Already Have Account</a>
+    </form>
 </body>
 </html>

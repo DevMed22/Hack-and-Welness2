@@ -1,11 +1,26 @@
-from django.contrib.auth import get_user_model
-from django import forms
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from .models import Hero
 
-class SignUpForm(forms.ModelForm):
+
+class SignUpForm(UserCreationForm):
     class Meta:
-        model = get_user_model
+        model = Hero
         fields = (
             'username',
             'email',
-            
+            'name',
+            'height',
+            'weight',
+        )
+
+
+class SignUpChangeForm(UserChangeForm):
+    class Meta:
+        model = Hero
+        fields = (
+            'username',
+            'email',
+            'name',
+            'height',
+            'weight',
         )
