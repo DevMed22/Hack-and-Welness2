@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',    #pages
+    'accounts.apps.AccountsConfig', # Auth
 ]
+
+AUTH_USER_MODEL = 'accounts.Hero'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
