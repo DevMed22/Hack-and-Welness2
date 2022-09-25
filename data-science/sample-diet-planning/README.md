@@ -29,6 +29,6 @@ your body type
 ## How to open the app
 - install requirements from requirements.txt file
 - open the file of the project on terminal
-- write 'streamlit run filename.py' on the terminal
+- write `streamlit run filename.py` on the terminal
 
 
