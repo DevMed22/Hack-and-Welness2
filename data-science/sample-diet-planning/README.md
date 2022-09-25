@@ -8,15 +8,22 @@ your body type
 ## samples from the website
 ### Creating the diet plans
 ![](web-images/1.jpg)
-Download your diet meals, ingradients for these meals and nutritions of meals as csv files
+
+**Download your diet meals, ingradients for these meals and nutritions of meals as csv files**
+
 ![](web-images/2.jpg)
 
 ### View your diet plan after creation
-Viewing menu for the day you chose
+**Viewing menu for the day you chose**
+
 ![](web-images/3.jpg)
-Viewing the ingredients of the meals
+
+**Viewing the ingredients of the meals**
+
 ![](web-images/4.jpg)
-Viewing the nutrition value
+
+**Viewing the nutrition value**
+
 ![](web-images/5.jpg)
 
 ## How to open the app
