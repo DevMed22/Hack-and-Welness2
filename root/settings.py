@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',    #pages
     'accounts.apps.AccountsConfig', # Auth
     'posts.apps.PostsConfig', # posts
+    'diet.apps.DietConfig',
+    'meals.apps.MealsConfig',
 ]
 
 AUTH_USER_MODEL = 'accounts.Hero'
