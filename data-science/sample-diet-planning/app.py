@@ -1,5 +1,7 @@
 from dietkit import *
 import streamlit as st
+from PIL import Image
+import plotly.graph_objects as go
 import matplotlib
 import seaborn
 import pandas
@@ -8,11 +10,10 @@ st.title('AI Diet Creator')
 st.write(''' This model is for all who have a problem with their eat and their meal and want to change their life,
              with our model you don't need to be an expert or go to doctors you just 'll input your data and let us \
             create your diet depending on your body type''')
-from PIL import Image
 
 image = Image.open('img.png')
 st.image(image)
-st.subheader('Create your own diet plan')
+st.header('Create your own diet plan')
 age = st.slider('Select age', 1, 100)
 H = st.number_input('Height')
 W = st.number_input('Weight')
@@ -78,4 +79,17 @@ st.write(f'Nutrition Values for Menu of day {select_day}')
 nut = st.button('Nutrition Values')
 if nut:
     data_nut = sample_diets.nutrition[select_day - 1]
+    # The plot
+    fig = go.Figure(
+        go.Pie(
+            labels=list(data_nut.keys()),
+            values=list(data_nut.values()),
+            hoverinfo="label+percent",
+            textinfo="value"
+        ))
+
+    st.subheader("Pie chart")
+
+    st.plotly_chart(fig)
     st.write(data_nut)
+
