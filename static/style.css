@@ -79,3 +79,26 @@ navbar-light .navbar-nav .nav-link{
     width: 200px;
     height: 200px;
 }
+.main{
+margin-left: 43%;
+}
+.main label{
+    display: block;
+    font-size: 22px;
+    color: #0119F0;
+}
+#id_Breakfast,#id_Dinner,#id_Lunch,#id_Workouthome,#id_WakeEarly,#id_SleepEarly,#id_Run,#id_Gym{
+    margin: 10px;
+    display: block;
+    width: 200px;
+
+}
+.Home{
+    background-image: url(../static/pi2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+}
