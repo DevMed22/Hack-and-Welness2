@@ -11,3 +11,6 @@ Dietkit's function is divided into three main functions: Loader, Evaluator and V
 Loader functions load ingredient, menu or diet data. If the specific file path is not passed, it automatically loads the our sample data.  
 Evaluator functions evaluate the menu or diet in terms of ingredients and nutrition based on user's criteria.
 Visualizer functions graphically visualize the diet's information or evaluation results.
+
+## Resource
+[DietKit Repo](https://github.com/pki663/dietkit)
