@@ -72,3 +72,10 @@ navbar-light .navbar-nav .nav-link{
     color: red;
     left: 110px;
 }
+
+
+
+#myChart1{
+    width: 200px;
+    height: 200px;
+}

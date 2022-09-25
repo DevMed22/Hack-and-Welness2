@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>{{ object.name }}</title>
+{% endblock title %}
+{% block content %}
+    <ul>
+        {% if {{object.thumb.url}} %}
+            <li><img src="{{ object.thumb.url }}" alt=""></li>
+        {% endif %}
+        <li>{{ object.name }}</li>
+        <li>{{ object.category }}</li>
+        <li>{{ object.plate }}</li>
+        
+    </ul>
+{% endblock content %}
