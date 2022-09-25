@@ -5,7 +5,7 @@
 
 {% block content %}
     {% if heros_list %}
-    <p style="font-weight:bold;text-align: center;margin-top: 30px;font-size: 30px;color: blue;">Scoreboard</p>
+    <p style="font-weight:bold;text-align: center;margin-top: 30px;font-size: 30px;color: green;">Scoreboard</p>
         <div class="container py-5">
             <table class="table table-secondry table-striped  table-bordered text-center">
     
@@ -48,12 +48,7 @@
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
                 'rgba(153, 102, 255, 1)',
-                'rgba(0, 128, 0, 0)',
-                'rgba(150, 180, 1, 0)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(50, 0, 200, 18)',
-                'rgba(2, 70, 9, 55)',
-                'rgba(0, 255, 0, 255)',
+                
             ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -67,7 +62,13 @@
         }]
             },
         options: {
-
+            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
         }
         });
     </script>

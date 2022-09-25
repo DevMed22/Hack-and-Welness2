@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block title %}
 <title>{{ object.title }}</title>
 {% endblock title %}
 
 {% block content %}
-<a href="{{ post.update }}">Edit</a>
+
+<div class="detail-box" style="margin-left: 40%; font-weight: bold;" >
+    <a href="{{ post.update }}">Edit</a>
     <a href="{% url 'posts:delete_post' post.pk %}">Delete</a>
     {% if post.thumb %}
         <img src="{{ post.thumb.url }}" alt="NOT FOUND">
@@ -27,4 +30,5 @@
         {{ form |crispy }}
         <button type="submit">Save</button>
     </form>
+</div>
 {% endblock content %}

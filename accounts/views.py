@@ -7,7 +7,7 @@ from .forms import SignUpForm
 class SignUpView(CreateView):
     form_class = SignUpForm
     template_name = 'registration/signup.html'
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("login")
     def form_valid(self, form):
         form.instance.bmi = form.instance.weight / ((form.instance.height/100)**2)
         form.instance.points = 0
