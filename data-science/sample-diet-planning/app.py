@@ -17,7 +17,7 @@ st.header('Create your own diet plan')
 age = st.slider('Select age', 1, 100)
 H = st.number_input('Height')
 W = st.number_input('Weight')
-days = st.slider('Select diet days', 1, 7, 4)
+days = st.slider('Select diet days', 1, 30, 10)
 # Dietkitst
 sample_ingredients = load_ingredient(sample_language='eng')
 sample_menus = load_menu(ingredients=sample_ingredients, sample_language='eng')
