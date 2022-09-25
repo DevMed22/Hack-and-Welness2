@@ -1,7 +1,7 @@
 # AI Diet Creator
 ![](https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F220317153849-diet-culture-stock.jpg)
 This model is for all who have a problem with their eat and their meal and want 
-to change their life, with our model you don't need to be an expert or go to 
+to change their lives, with our model you don't need to be an expert or go to 
 doctors you just 'll input your data and let us create your diet depending on 
 your body type
 
