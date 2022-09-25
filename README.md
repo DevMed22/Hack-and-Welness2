@@ -4,6 +4,7 @@
 - To activate `.venv\Scripts\activate` via cmd
 - To install Requirements `python -m pip install -r requirements.txt`
 - To Start Server use command in line in project Directory then type `python manage.py runserver`
+
 ## Inspiration
 Many people start their diet with a strong desire to reach the perfect body shape, but after a while, they feel alone on the road, and sadly their journey stops. We thought about this idea and created a website that uses AI to engage people and connect them to make the journey competitive and enjoyable.
 
