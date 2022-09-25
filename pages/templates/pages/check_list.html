@@ -4,9 +4,20 @@
 {% endblock title %}
 
 {% block content %}
-    <form method="post">
+<div class="Home">
+    <form method="post"class="main">
         {% csrf_token %}
         {{form}}
-        <button type="submit">Earn Points</button>
+        <button type="submit"style="
+        margin-left: 4%;
+   margin-top: 35px;
+   /* margin-right: 0; */
+   border: 3px solid transparent;
+   padding: 10px 5px;
+   border-radius: 20px;
+   background-color:#6a737b;
+   color:#FFF;
+        ">Earn Points</button>
     </form>
+</div>
 {% endblock content %}
