@@ -91,5 +91,6 @@ if nut:
     st.subheader("Pie chart")
 
     st.plotly_chart(fig)
+    st.subheader('Nutrition Values')
     st.write(data_nut)
 
