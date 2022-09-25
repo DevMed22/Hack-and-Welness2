@@ -3,12 +3,34 @@
     <title>Ingredients</title>
 {% endblock title %}
 {% block content %}
-    {% if ing_list %}
-    <ul>{% for ing in ing_list %}
-        <li><a href="{{ ing.get_absolute_url }}">{{ ing.name }}</a></li>
-    {% endfor %}
-    </ul>
-    {% else %}
-    <p>No Ingredients</p>
-    {% endif %}
+<body>
+    <div class="Home2">
+        <!-- <table class="table-primar bg-danger">
+            <thead>
+              <tr>
+                <th scope="col">Ingredients</th>
+        
+              </tr>
+            </thead>
+            <tbody>
+                {% for ing in ing_list %}
+        
+              <tr>
+        
+                <td><a href="{{ ing.get_absolute_url }}">{{ ing.name }}</a></td>
+        
+            
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table> -->
+          <div class="content">
+            <h2 style="text-align: center;font-weight:bold;font-size:60px ;color: #15819e;">Popular Ingredients</h2>
+            {% for ing in ing_list %}
+            <p style="text-align: center;font-size: 25px;"><a href="{{ ing.get_absolute_url }}"style="color:#2761DE;">{{ ing.name }}</a></p>
+            {% endfor %}
+          </div>
+    </div>
+    
+</body>
     {% endblock content %}

@@ -23,9 +23,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.PROTECT)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
     comment = models.CharField(max_length=200)
-    author = models.ForeignKey(model, on_delete=models.PROTECT)
+    author = models.ForeignKey(model, on_delete=models.CASCADE)
 
 
     def __str__(self):

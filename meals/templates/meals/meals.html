@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+    <title>Ingredients</title>
+{% endblock title %}
+{% block content %}
     {% if meals %}
-    <ul>
+    <ul> <h2 style="text-align: center;font-weight:bold;font-size:60px ;color: #15819e;">Meals</h2>
         {% for meal in meals %}
-            <li><a href="{{ meal.get_absolute_url }}">{{ meal.name }}</a></li>
+        <div class="content">
+            <p style="text-align: center;font-size: 25px;"><a href="{{ meal.get_absolute_url }}"style="color:#2761DE;">{{ meal.name }}</a></p>
+          </div>
         {% endfor %}
     </ul>
     {% else %}
     <p>No Meals</p>
     {% endif %}
-</body>
-</html>
+{% endblock content %}
